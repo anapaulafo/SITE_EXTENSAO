@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <h2>Animais Disponíveis para Adoção</h2>
+        {% for animal in animais %}
+            <div class="animal">
+                <img src="{{ url_for('static', filename='uploads/' ~ animal['foto']) }}" alt="{{ animal['nome'] }}">
+                <h3>{{ animal['nome'] }}</h3>
+                <p>{{ animal['descricao'] }}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

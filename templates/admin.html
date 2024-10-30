@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <h2>Administração</h2>
+        <form action="{{ url_for('admin') }}" method="POST" enctype="multipart/form-data">
+            <label for="nome">Nome do Animal</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <label for="foto">Foto</label>
+            <input type="file" id="foto" name="foto" required>
+
+            <button type="submit">Cadastrar Animal</button>
+        </form>
+        <h3>Animais Cadastrados</h3>
+        <ul>
+            {% for animal in animais %}
+                <li>{{ animal['nome'] }} - <a href="{{ url_for('remover', index=loop.index0) }}">Remover</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

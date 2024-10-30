@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <h2>Formulário de Adoção</h2>
+        <form action="{{ url_for('contato') }}" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="bicho">Animal para Adoção</label>
+            <input type="text" id="bicho" name="bicho" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+{% endblock %}
