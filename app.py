@@ -7,7 +7,7 @@ app.secret_key = 'super_secret_key'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 PASSWORD = "1234"
 
-# Simulação de banco de dados em memória
+
 animais = []
 
 # Página inicial

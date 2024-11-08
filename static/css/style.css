@@ -1,4 +1,4 @@
-/* Configuração geral */
+
 body {
     font-family: 'Muli', sans-serif;
     background-color: #CABB90;
@@ -47,7 +47,7 @@ h2, h3 {
     color: #5a5a5a;
 }
 
-/* Estilo para os animais */
+
 .animal {
     background-color: #818753;
     border-radius: 5px;
@@ -68,7 +68,7 @@ h2, h3 {
     margin: 10px 0;
 }
 
-/* Estilo para formulários */
+
 form {
     background-color: #818753;
     padding: 20px;
@@ -103,7 +103,7 @@ form button:hover {
     background-color: #3d3d3d;
 }
 
-/* Mensagens de erro ou sucesso */
+
 ul {
     color: #d9534f;
     list-style-type: none;
@@ -178,4 +178,8 @@ ul {
     text-align: center; 
     padding: 20px 0; 
     background-color: #9fb6a4; 
+}
+
+h2 {
+    text-align: center;
 }
