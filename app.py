@@ -10,12 +10,12 @@ PASSWORD = "1234"
 
 animais = []
 
-# Página inicial
+
 @app.route('/')
 def index():
     return render_template('index.html', animais=animais)
 
-# Página de contato
+
 @app.route('/contato', methods=['GET', 'POST'])
 def contato():
     if request.method == 'POST':
@@ -23,13 +23,11 @@ def contato():
         bicho = request.form['bicho']
         telefone = request.form['telefone']
         mensagem = request.form['mensagem']
-        # Implementação para envio de email (exemplo de print no console)
         print(f"Email para abrigo@abrigo.com\nNome: {nome}\nBicho: {bicho}\nTelefone: {telefone}\nMensagem: {mensagem}")
         flash('Mensagem enviada com sucesso!')
         return redirect(url_for('index'))
     return render_template('contato.html')
 
-# Página de login do admin
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -40,7 +38,6 @@ def login():
             flash('Senha incorreta!')
     return render_template('login.html')
 
-# Página de administração (protegida)
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
     if not session.get('logged_in'):
@@ -56,7 +53,6 @@ def admin():
             flash('Animal adicionado com sucesso!')
     return render_template('admin.html', animais=animais)
 
-# Remover animal
 @app.route('/remover/<int:index>')
 def remover(index):
     if session.get('logged_in'):
@@ -68,7 +64,6 @@ def remover(index):
         return redirect(url_for('admin'))
     return redirect(url_for('login'))
 
-# Logout
 @app.route('/logout')
 def logout():
     session.pop('logged_in', None)
