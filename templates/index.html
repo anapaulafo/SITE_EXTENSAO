@@ -2,12 +2,22 @@
 {% block content %}
     <section>
         <h2>Animais Disponíveis para Adoção</h2>
-        {% for animal in animais %}
-            <div class="animal">
-                <img src="{{ url_for('static', filename='uploads/' ~ animal['foto']) }}" alt="{{ animal['nome'] }}">
-                <h3>{{ animal['nome'] }}</h3>
-                <p>{{ animal['descricao'] }}</p>
-            </div>
-        {% endfor %}
+        <div class="galeria-animais">
+            {% for animal in animais %}
+                <div class="animal">
+                    <img src="{{ url_for('static', filename='uploads/' ~ animal['foto']) }}" alt="{{ animal['nome'] }}">
+                    <h3>{{ animal['nome'] }}</h3>
+                    <p>{{ animal['descricao'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <h2 id="Call">Gostou de algum bichinho? Envie uma mensagem para nós <a href="{{ url_for('contato') }}">clicando aqui!</a></h2>
+        <div id="Historia">
+        <h2>Nossa história</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus diam at efficitur sagittis. Nullam auctor efficitur sem, id bibendum sem finibus non. Nullam vel posuere quam. Curabitur purus risus, tristique at dapibus quis, iaculis at mi. Suspendisse lobortis eleifend ipsum, et pretium dui tempor eu. Sed rutrum risus in elementum lobortis. Sed ultricies lorem ante, vitae lobortis mauris bibendum eget. Maecenas purus massa, scelerisque non dictum quis, varius ac massa. Aenean sed metus lectus. In hac habitasse platea dictumst. Vivamus tincidunt sed odio vitae lobortis. Vivamus hendrerit eu lacus vitae tempor. Donec tellus augue, consequat et lacus nec, molestie ultrices justo.</p>
+        <p>Fusce mattis neque ac hendrerit volutpat. In sollicitudin massa sit amet venenatis tempor. Curabitur consectetur risus tortor, non laoreet mi tempus quis. Nunc bibendum magna hendrerit tortor posuere, in tincidunt elit fermentum. Aenean sit amet ante dolor. Mauris velit felis, varius eget erat non, tempor posuere leo. Sed dictum urna vitae sem varius porta. Proin quis mollis sem, maximus ornare libero. Etiam fringilla nulla in sem auctor, id tempus est pretium. Vivamus hendrerit ligula odio, id consequat risus dapibus sit amet. Phasellus eget bibendum elit. Proin id tristique nulla, ac fringilla erat. Proin sollicitudin velit vel molestie sodales. Curabitur molestie convallis sem, ut molestie erat mattis a. Duis consequat in diam commodo hendrerit.</p>
+    </div>
+
+            
     </section>
 {% endblock %}

@@ -1,29 +1,181 @@
+/* Configuração geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Muli', sans-serif;
+    background-color: #CABB90;
     margin: 0;
     padding: 0;
 }
+
 header {
-    background-color: #333;
+    background-color: #9fb6a4;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-align: center;
 }
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
 nav a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
+    font-weight: bold;
 }
-section {
-    margin: 20px;
+
+main {
+    padding: 20px;
 }
+
+h2, h3 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #5a5a5a;
+}
+
+/* Estilo para os animais */
 .animal {
-    border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #818753;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.animal img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
-form label, form input, form textarea, form button {
+
+.animal h3 {
+    margin: 10px 0;
+}
+
+/* Estilo para formulários */
+form {
+    background-color: #818753;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+form label {
     display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
     margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Muli', sans-serif;
+}
+
+form button {
+    background-color: #5a5a5a;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #3d3d3d;
+}
+
+/* Mensagens de erro ou sucesso */
+ul {
+    color: #d9534f;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.galeria-animais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.animal {
+    width: 400px; 
+    background-color: #818753;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box; 
+
+.animal img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.logo {
+    max-width: 150px; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.logo-container h1 {
+    font-family: 'Ubuntu', sans-serif; 
+    color: #3d3f21; 
+}
+
+#Historia {
+    background-color: #9fb6a4;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+
+#Call {
+    background-color: #caa774;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+
+#Footer {
+    font-family: 'Muli', sans-serif; 
+    color: #3d3f21; 
+    text-align: center; 
+    padding: 20px 0; 
+    background-color: #9fb6a4; 
 }
